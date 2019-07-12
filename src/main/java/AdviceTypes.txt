@@ -1,0 +1,9 @@
+Advice Types
+
+@Before			: Before a method is called. 
+@AfterReturning : After a successfull execution of a method
+@AfterThrowing  : After an exception is thrown by any method.
+@After          : After Finally Advice :- After a method is completed, irrespective of Success or Exception, can be compared to finally block written inside a method.
+				: It runs before AfterThrowing method, similar to finally block, it is run before throwing the exception and you can't check for exact exception here, should used only when you don't give a shit to the outcome.
+@Around			: Before and after of a method call, it is like a combination of Before and After but little more fine grained.
+				: You can use this to handle the exception if it is thrown then you can do the alternative.					 
