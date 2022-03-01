@@ -24,9 +24,11 @@ public class MainDemoApp {
 		}
 		try {
 			accountDao.throwException();
+			//Open com.sethi.aayush.aopdemo.aspect.AfterThrowingAspect.afterThrowingExceptionAdvice(JoinPoint, Throwable)
 		} catch (Exception e) {
 			//e.printStackTrace();
 		}
+		//Open com.sethi.aayush.aopdemo.aspect.AfterAspect.afterFinallyAdvice(JoinPoint)
 		// get the bean from spring container
 		MembershipDAO memebershipDao = context.getBean("membershipDAO", MembershipDAO.class);
 		// call the business method
@@ -39,7 +41,9 @@ public class MainDemoApp {
 		Account account1 = context.getBean("account", Account.class);
 		account1.setLevel("Primary");
 		account1.setName("Jimmy");
+		//com.sethi.aayush.aopdemo.aspect.MyDemoLoggingAspect: runThisForAllExceptGetterAndSetter
 		account1.doNothingExceptBlabla();
+		//com.sethi.aayush.aopdemo.aspect.MyDemoLoggingAspect: runThisForAllExceptGetterAndSetter
 		account1.doNothingWithArguments("blabla", 5);
 		account1.getLevel();
 		account1.getName();
