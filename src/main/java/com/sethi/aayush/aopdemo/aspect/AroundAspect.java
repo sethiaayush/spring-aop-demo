@@ -11,6 +11,11 @@ import org.springframework.stereotype.Component;
 @Order(5)
 public class AroundAspect {
 
+	//runs before and after method execution
+	//Preprocessing and post processing of data
+	//Log method running time-Profiling code
+	//Manage exception, swallow, handle, stop exception, rethrow exception can be done as well.
+	//ProceedingJoinPoint - handler to targetMethod
 	@Around("execution(* com.sethi.aayush.aopdemo.dao.AccountDAO.findAccounts(..))")
 	public Object aroundFindAccountsAdvice(ProceedingJoinPoint theProceedingJoinPoint) throws Throwable {
 		long start = System.currentTimeMillis();

@@ -4,14 +4,15 @@ Open MainDemoApp.java
 2. Browse accountDAO, pure neat code. (POJO)
 3. Run/Debug MainDemoApp
 4. Browse Package:- *.aspect, open MyDemoLoggingAspect, place debug point across all methods.
-5. Debugging is the key here.
+5. runThisForAllExceptGetterAndSetter, watch out for JoinPoint
+6. Debugging is the key here.
 
 How to write PointCut expressions, PointcutEL is the key. Read PointcutEL.txt
 
 Browse code based on breakpoints.
 Place breakpoint in
 1. AfterAspect
-2. AfterReturningAspect
+2. AfterReturningAspect (Watch for JoinPoint, provide information and arguments)
 3. AfterThrowingAspect
 4. AroundAspect
 

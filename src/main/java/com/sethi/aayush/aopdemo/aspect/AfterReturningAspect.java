@@ -16,6 +16,7 @@ import com.sethi.aayush.aopdemo.Account;
 public class AfterReturningAspect {
 
 	// Below method is used to modify the data: Post processing the data
+	// Data of results(OutputFromMethod) is getting modified after the execution complete of findAccounts <<Scary but True>>
 	@AfterReturning(pointcut = "execution(* com.sethi.aayush.aopdemo.dao.AccountDAO.findAccounts(..))", returning = "results")
 	public void afterReturningFindAccountsAdvice(JoinPoint theJoinPoint, List<Account> results) {
 		for (Account account : results) {
